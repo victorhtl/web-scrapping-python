@@ -16,7 +16,7 @@ def getMetas(url):
     '''
     html_doc = requests.get(url).content
     soup = BeautifulSoup(html_doc, 'html.parser')
-    array_tags_meta = {}
+    array_tags_meta = []
     for i, meta in enumerate(soup.find_all('meta')):
         array_tags_meta[i] = (str(meta))
 
